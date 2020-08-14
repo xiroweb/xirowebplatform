@@ -677,7 +677,11 @@ INSERT INTO `#__extensions` (`extension_id`, `package_id`, `name`, `type`, `elem
 (700, 0, 'files_joomla', 'file', 'joomla', '', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (802, 0, 'English (en-GB) Language Pack', 'package', 'pkg_en-GB', '', 0, 1, 1, 1, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
-INSERT INTO `#__extensions` VALUES (10000,10002,'Vietnamese-VN','language','vi-VN','',0,1,0,0,'{\"name\":\"Vietnamese-VN\",\"type\":\"language\",\"creationDate\":\"December 2013\",\"author\":\"Vietnamese Translation Team Translation Team\",\"copyright\":\"Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.\",\"authorEmail\":\"info@joomlaviet.info\",\"authorUrl\":\"http:\\/\\/joomlaviet.info\",\"version\":\"3.2.1.2\",\"description\":\"Vietnamese language pack for Joomla! 3.2\",\"group\":\"\",\"filename\":\"install\"}','{}','','',0,'0000-00-00 00:00:00',0,0),(10001,10002,'Vietnamese-VN','language','vi-VN','',1,1,0,0,'{\"name\":\"Vietnamese-VN\",\"type\":\"language\",\"creationDate\":\"December 2013\",\"author\":\"Vietnamese Translation Team\",\"copyright\":\"Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.\",\"authorEmail\":\"info@joomlaviet.info\",\"authorUrl\":\"http:\\/\\/joomlaviet.info\",\"version\":\"3.2.1.2\",\"description\":\"Vietnamese administration language for Joomla! 3.2\",\"group\":\"\",\"filename\":\"install\"}','{}','','',0,'0000-00-00 00:00:00',0,0),(10002,0,'Vietnamese Language Pack','package','pkg_vi-VN','',0,1,1,0,'{\"name\":\"Vietnamese Language Pack\",\"type\":\"package\",\"creationDate\":\"December 2013\",\"author\":\"Vietnamese Translation Team\",\"copyright\":\"Copyright (C) 2013 joomlaviet.info and Open Source Matters. All rights reserved.\",\"authorEmail\":\"info@joomlaviet.info\",\"authorUrl\":\"http:\\/\\/joomlaviet.info\",\"version\":\"3.2.1.2\",\"description\":\"3.2.1.2 Joomla Vietnamese Language Package\",\"group\":\"\",\"filename\":\"pkg_vi-VN\"}','{}','','',0,'0000-00-00 00:00:00',0,0);
+INSERT INTO `#__extensions` VALUES
+(10000,10002, 'Vietnamese-VN', 'language', 'vi-VN', '', 0, 1, 0, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10001,10002, 'Vietnamese-VN', 'language', 'vi-VN', '', 1, 1, 0, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10002,0, 'Vietnamese Language Pack', 'package', 'pkg_vi-VN', '', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -1357,8 +1361,8 @@ CREATE TABLE IF NOT EXISTS `#__languages` (
 --
 
 INSERT INTO `#__languages` (`lang_id`, `lang_code`, `title`, `title_native`, `sef`, `image`, `description`, `metakey`, `metadesc`, `sitename`, `published`, `access`, `ordering`) VALUES
-(1, 'en-GB', 'English (en-GB)', 'English (United Kingdom)', 'en', 'en_gb', '', '', '', '', 1, 1, 1);
-INSERT INTO `#__languages` VALUES (2,60,'vi-VN','Vietnamese (vi-VN)','Vietnamese (vi-VN)','vi','vi_vn','','','','',0,1,1);
+(1, 'en-GB', 'English (en-GB)', 'English (United Kingdom)', 'en', 'en_gb', '', '', '', '', 0, 1, 1);
+INSERT INTO `#__languages` VALUES (2,60,'vi-VN','Vietnamese (vi-VN)','Vietnamese (vi-VN)','vi','vi_vn','','','','',1,1,1);
 -- --------------------------------------------------------
 
 --
