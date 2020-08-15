@@ -42,10 +42,10 @@ $prev = $useftp ? 'ftp' : 'database';
 		</div>
 	</div>
 
-	<h3><?php echo JText::_('INSTL_STEP_SUMMARY_LABEL'); ?></h3>
-	<hr class="hr-condensed" />
+	<?php echo JHtml::_('bootstrap.startAccordion', 'menuOptions', array(	)); ?>
+	<?php echo JHtml::_('bootstrap.addSlide', 'menuOptions', JText::_('INSTL_STEP_SUMMARY_CHECK_SYSTEM'), 'collapse0'); ?>
 
-	<div class="control-group" id="summary_email">
+	<div class="control-group hidden" id="summary_email">
 		<div class="control-label">
 			<?php echo $this->form->getLabel('summary_email'); ?>
 		</div>
@@ -330,6 +330,8 @@ $prev = $useftp ? 'ftp' : 'database';
 				</tfoot>
 			</table>
 		</div>
+		<?php echo JHtml::_('bootstrap.endSlide'); ?>
+		<?php echo JHtml::_('bootstrap.endAccordion'); ?>
 	</div>
 	<div class="row-fluid">
 		<div class="btn-toolbar">

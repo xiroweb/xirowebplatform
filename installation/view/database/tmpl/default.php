@@ -77,6 +77,8 @@ defined('_JEXEC') or die;
 			</p>
 		</div>
 	</div>
+	<?php echo JHtml::_('bootstrap.startAccordion', 'menuOptions', array(	)); ?>
+	<?php echo JHtml::_('bootstrap.addSlide', 'menuOptions', JText::_('INSTL_DATABASE_MORE_OPTIONS'), 'collapse0'); ?>
 	<div class="control-group">
 		<div class="control-label">
 			<?php echo $this->form->getLabel('db_prefix'); ?>
@@ -99,6 +101,8 @@ defined('_JEXEC') or die;
 			</p>
 		</div>
 	</div>
+	<?php echo JHtml::_('bootstrap.endSlide'); ?>
+	<?php echo JHtml::_('bootstrap.endAccordion'); ?>
 	<div class="row-fluid">
 		<div class="btn-toolbar">
 			<div class="btn-group pull-right">
