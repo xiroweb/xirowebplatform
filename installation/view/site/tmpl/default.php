@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
 	<h3><?php echo JText::_('INSTL_SITE'); ?></h3>
 	<hr class="hr-condensed" />
 	<div class="row-fluid">
-		<div class="span6">
+		<div class="span12">
 			<div class="control-group">
 				<div class="control-label">
 					<?php echo $this->form->getLabel('site_name'); ?>
@@ -41,7 +41,7 @@ defined('_JEXEC') or die;
 					<p class="help-block"><?php echo JText::_('INSTL_SITE_NAME_DESC'); ?></p>
 				</div>
 			</div>
-			<div class="control-group">
+			<div class="control-group hidden">
 				<div class="control-label">
 					<?php echo $this->form->getLabel('site_metadesc'); ?>
 				</div>
@@ -53,9 +53,9 @@ defined('_JEXEC') or die;
 				</div>
 			</div>
 		</div>
-		<div class="span6">
-			<div class="center">
-				<h4><?php echo JText::_('INSTL_SUPER_USER_TITLE'); ?></h4>
+		<div class="span12">
+			<div>
+				<h3><?php echo JText::_('INSTL_SUPER_USER_TITLE'); ?></h3>
 			</div>
 			<div class="control-group">
 				<div class="control-label">
@@ -96,7 +96,7 @@ defined('_JEXEC') or die;
 			</div>
 		</div>
 	</div>
-	<div class="row-fluid">
+	<div class="row-fluid hidden">
 		<div class="span12">
 			<div class="control-group">
 				<div class="control-label">

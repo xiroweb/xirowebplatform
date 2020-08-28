@@ -12,12 +12,18 @@ defined('_JEXEC') or die;
 ?>
 <?php echo JHtml::_('InstallationHtml.helper.stepbar'); ?>
 <form action="index.php" method="post" id="adminForm" class="form-validate form-horizontal">
-	<div class="btn-toolbar">
-		<div class="btn-group pull-right">
-			<a class="btn" href="#" onclick="return Install.goToPage('database');" rel="prev" title="<?php echo JText::_('JPREVIOUS'); ?>"><span class="icon-arrow-left"></span> <?php echo JText::_('JPREVIOUS'); ?></a>
-			<a class="btn btn-primary" href="#" onclick="Install.submitform();" rel="next" title="<?php echo JText::_('JNEXT'); ?>"><span class="icon-arrow-right icon-white"></span> <?php echo JText::_('JNEXT'); ?></a>
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="btn-toolbar">
+				<div class="btn-group pull-right">
+					<a class="btn" href="#" onclick="return Install.goToPage('database');" rel="prev" title="<?php echo JText::_('JPREVIOUS'); ?>"><span class="icon-arrow-left"></span> <?php echo JText::_('JPREVIOUS'); ?></a>
+					<a class="btn btn-primary" href="#" onclick="Install.submitform();" rel="next" title="<?php echo JText::_('JNEXT'); ?>"><span class="icon-arrow-right icon-white"></span> <?php echo JText::_('JNEXT'); ?></a>
+				</div>
+			</div>
 		</div>
 	</div>
+	<?php echo JHtml::_('bootstrap.startAccordion', 'menuOptions', array(	)); ?>
+	<?php echo JHtml::_('bootstrap.addSlide', 'menuOptions', JText::_('INSTL_DATABASE_MORE_OPTIONS'), 'collapse0'); ?>
 	<h3><?php echo JText::_('INSTL_FTP'); ?></h3>
 	<hr class="hr-condensed" />
 	<div class="control-group">
@@ -83,6 +89,8 @@ defined('_JEXEC') or die;
 			<?php echo $this->form->getInput('ftp_save'); ?>
 		</div>
 	</div>
+	<?php echo JHtml::_('bootstrap.endSlide'); ?>
+	<?php echo JHtml::_('bootstrap.endAccordion'); ?>
 	<div class="row-fluid">
 		<div class="btn-toolbar">
 			<div class="btn-group pull-right">

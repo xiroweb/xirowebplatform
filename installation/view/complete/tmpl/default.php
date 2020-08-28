@@ -19,7 +19,7 @@ defined('_JEXEC') or die;
 	<div class="alert alert-success">
 		<h3><?php echo JText::_('INSTL_COMPLETE_TITLE'); ?></h3>
 	</div>
-	<div id="languages" class="row-fluid">
+	<div id="languages" class="row-fluid hidden">
 		<h3><?php echo JText::_('INSTL_COMPLETE_LANGUAGE_1'); ?></h3>
 		<hr class="hr-condensed" />
 		<div class="row-fluid">
@@ -33,19 +33,25 @@ defined('_JEXEC') or die;
 		</div>
 	</div>
 	<div class="row-fluid">
-		<div class="alert">
+		<div class="alert ">
 			<p><?php echo JText::sprintf('INSTL_COMPLETE_REMOVE_INSTALLATION', 'installation'); ?></p>
 			<input type="button" class="btn btn-warning" name="instDefault" onclick="Install.removeFolder(this);" value="<?php echo JText::sprintf('INSTL_COMPLETE_REMOVE_FOLDER', 'installation'); ?>" />
 		</div>
 	</div>
 	<div class="row-fluid">
-		<div class="btn-toolbar span6">
-			<div class="btn-group">
-				<a class="btn" href="<?php echo JUri::root(); ?>" title="<?php echo JText::_('JSITE'); ?>"><span class="icon-eye-open"></span> <?php echo JText::_('JSITE'); ?></a>
-			</div>
-			<div class="btn-group">
-				<a class="btn btn-primary" href="<?php echo JUri::root(); ?>administrator/" title="<?php echo JText::_('JADMINISTRATOR'); ?>"><span class="icon-lock icon-white"></span> <?php echo JText::_('JADMINISTRATOR'); ?></a>
-			</div>
+		<div class="span6">
+			<h3><?php echo JText::_('INSTL_COMPLETE_ADMINISTRATION_ABOUT_FRONTEND_BACKEND'); ?></h3>
+			<p><?php echo JText::_('INSTL_COMPLETE_ADMINISTRATION_ABOUT_FRONTEND_BACKEND_DESC'); ?></p>
+
+			<p><?php echo JText::_('INSTL_COMPLETE_ADMINISTRATION_ABOUT_FRONTEND'); ?></p>
+				<div class="btn-group">
+					<a class="btn btn-info" target="_blank" href="<?php echo JUri::root(); ?>" title="<?php echo JText::_('JSITE'); ?>"><span class="icon-eye-open"></span> <?php echo JText::_('JSITE'); ?></a>
+				</div>
+			<p><?php echo JText::_('INSTL_COMPLETE_ADMINISTRATION_ABOUT_BACKEND'); ?><span class="label label-info"><?php echo JUri::root(); ?>administrator/</span></p>
+				<div class="btn-group">
+					<a class="btn btn-primary" target="_blank" href="<?php echo JUri::root(); ?>administrator/" title="<?php echo JText::_('JADMINISTRATOR'); ?>"><span class="icon-lock icon-white"></span> <?php echo JText::_('JADMINISTRATOR'); ?></a>
+				</div>
+
 		</div>
 		<div class="span6">
 			<h3><?php echo JText::_('INSTL_COMPLETE_ADMINISTRATION_LOGIN_DETAILS'); ?></h3>

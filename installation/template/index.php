@@ -60,7 +60,7 @@ $this->addScriptOptions('system.installation', array('url' => JRoute::_('index.p
 	<body data-basepath="<?php echo JUri::root(true); ?>">
 		<!-- Header -->
 		<div class="header">
-			<img src="<?php echo $this->baseurl; ?>/template/images/joomla.png" alt="Joomla" />
+			<img src="<?php echo $this->baseurl; ?>/template/images/xiroweb.png" alt="XiroWeb PlatForm" />
 			<hr />
 			<h5>
 				<?php // Fix wrong display of Joomla!® in RTL language ?>
