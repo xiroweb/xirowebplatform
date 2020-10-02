@@ -49,7 +49,7 @@ class ModulesModelModules extends JModelList
 				'position', 'a.position',
 				'pages',
 				'name', 'e.name',
-				'menuitem',
+				'menuitem',  'roottemplate',
 			);
 		}
 
@@ -122,6 +122,10 @@ class ModulesModelModules extends JModelList
 		// Load the parameters.
 		$params = JComponentHelper::getParams('com_modules');
 		$this->setState('params', $params);
+
+		// xiroadmin, fitler roottemplate
+		$roottemplate = $app->input->getString('roottemplate', '');
+		$this->setState('roottemplate', $roottemplate);
 
 		// List state information.
 		parent::populateState($ordering, $direction);
@@ -346,6 +350,15 @@ class ModulesModelModules extends JModelList
 		if ($position = $this->getState('filter.position'))
 		{
 			$query->where($db->quoteName('a.position') . ' = ' . $db->quote(($position === 'none') ? '' : $position));
+		} else {
+			// xiroadmin
+			// only template modal select
+			if ($this->getState('roottemplate','')) {
+				JLoader::register('TemplatesHelper', JPATH_ADMINISTRATOR . '/components/com_templates/helpers/templates.php');
+				$positions = TemplatesHelper::getPositions($clientId, $this->getState('roottemplate'));
+				$positions_query = implode(',', $db->quote($positions));
+				$query->where($db->quoteName('a.position') .' IN (' .  $positions_query . ')');
+			}
 		}
 
 		// Filter by module.

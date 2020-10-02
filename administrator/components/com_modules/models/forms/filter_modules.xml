@@ -86,7 +86,7 @@
 			description="JGLOBAL_SORT_BY"
 			statuses="*,0,1,-2"
 			onchange="this.form.submit();"
-			default="a.position ASC"
+			default="a.ordering ASC"
 			validate="options"
 			>
 			<option value="">JGLOBAL_SORT_BY</option>
