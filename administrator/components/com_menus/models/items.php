@@ -200,6 +200,8 @@ class MenusModelItems extends JModelList
 		{
 			$this->setState('filter.language', $forcedLanguage);
 		}
+		
+		$this->setState('list.limit', '100');
 	}
 
 	/**
