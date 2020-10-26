@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<menu
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:joomla.org"
+	xsi:schemaLocation="urn:joomla.org menu.xsd">
+	<menuitem
+			type="component"
+			title="MOD_MENU_CONTROL_PANEL"
+			link="index.php"
+			element="com_cpanel"
+			class="class:cpanel fa fa-dashboard"
+		>
+	</menuitem>
+	<menuitem
+		title="MOD_MENU_COM_CONTENT"
+		type="heading"
+		class="class:comcontent fa fa-edit"
+		>
+		<menuitem
+				title="MOD_MENU_COM_CONTENT_NEW_ARTICLE"
+				type="component"
+				element="com_content"
+				link="index.php?option=com_content&amp;task=article.add"
+				class="class:newarticle fa fa-edit "
+				scope="edit">
+		</menuitem>
+		<menuitem
+			title="MOD_MENU_COM_CONTENT_ARTICLE_MANAGER"
+			type="component"
+			element="com_content"
+			link="index.php?option=com_content"
+			class="class:article fa fa-newspaper-o">
+		</menuitem>
+		<menuitem
+			title="MOD_MENU_COM_CONTENT_CATEGORY_MANAGER"
+			type="component"
+			element="com_categories"
+			link="index.php?option=com_categories&amp;extension=com_content"
+			class="class:category fa fa-folder-open">
+		</menuitem>
+		<menuitem
+			type="separator"
+		/>
+		<menuitem
+			title="MOD_MENU_COM_CONTENT_FEATURED"
+			type="component"
+			element="com_content"
+			link="index.php?option=com_content&amp;view=featured"
+			class="class:featured"
+		/>
+
+		<menuitem
+			title="MOD_MENU_FIELDS"
+			type="component"
+			element="com_fields"
+			link="index.php?option=com_fields&amp;context=com_content.article"
+			class="class:fields"
+		/>
+		<menuitem
+			title="MOD_MENU_FIELDS_GROUP"
+			type="component"
+			element="com_fields"
+			link="index.php?option=com_fields&amp;view=groups&amp;context=com_content.article"
+			class="class:category"
+		/>
+		
+	</menuitem>
+	<menuitem
+		title="MOD_MENU_MEDIA_MANAGER"
+		type="component"
+		element="com_media"
+		link="index.php?option=com_media"
+		class="class:media fa fa-picture-o"
+		>
+	</menuitem>
+	<menuitem
+		title="TPL_XIROADMIN_MOD_MENU_TEMPLATES"
+		type="heading"
+		iconclass="nav-icon fas fa-th"
+		class="class:menuadmintemplate fa fa-magic"
+	>
+		<menuitem
+			title="MOD_MENU_COM_TEMPLATES_SUBMENU_STYLES"
+			type="component"
+			element="com_templates"
+			link="index.php?option=com_templates&amp;view=styles"
+			class="class:themes fa fa-window-maximize"
+		/>
+		<menuitem
+			title="MOD_MENU_EXTENSIONS_MODULE_MANAGER"
+			type="component"
+			element="com_modules"
+			link="index.php?option=com_modules"
+			class="class:module fa fa-cubes"
+		/>
+	</menuitem>
+
+	<menuitem
+		title="MOD_MENU_MENUS"
+		type="heading"
+		class="class:menus fa fa-sitemap"
+		>
+		<menuitem
+			type="separator"
+			title="JSITE"
+			hidden="false"
+			sql_select="a.title, a.menutype, CASE COALESCE(SUM(m.home), 0) WHEN 0 THEN '' WHEN 1 THEN CASE m.language WHEN '*' THEN 'class:icon-home' ELSE CONCAT('image:mod_languages/', l.image, '.gif') END ELSE 'image:mod_languages/icon-16-language.png' END AS icon"
+			sql_from="#__menu_types AS a"
+			sql_where="a.client_id = 0"
+			sql_leftjoin="#__menu AS m ON m.menutype = a.menutype AND m.home = 1 LEFT JOIN #__languages AS l ON l.lang_code = m.language"
+			sql_group="a.id, m.language, l.image"
+			sql_order="a.id ASC">
+			<menuitem
+				title="{sql:title} "
+				type="component"
+				element="com_menus"
+				link="index.php?option=com_menus&amp;view=items&amp;menutype={sql:menutype}"
+				icon="{sql:icon}"
+				class="class:menu fa fa-sitemap ">
+			</menuitem>
+		</menuitem>
+		<menuitem
+			type="separator"
+		/>
+		<menuitem
+			title="MOD_MENU_MENU_MANAGER"
+			type="component"
+			element="com_menus"
+			link="index.php?option=com_menus&amp;view=menus"
+			class="class:menumgr fa fa-list-alt">
+		</menuitem>
+		
+		<menuitem
+			title="MOD_MENU_MENUS_ALL_ITEMS"
+			type="component"
+			element="com_menus"
+			link="index.php?option=com_menus&amp;view=items&amp;menutype="
+			class="class:allmenu fa fa-list-alt"
+		/>
+	
+	</menuitem>
+
+	<menuitem
+		title="MOD_MENU_COM_USERS_USERS"
+		type="heading"
+		class="class:users fa fa-user-circle"
+		>
+		<menuitem
+			title="MOD_MENU_COM_USERS_USER_MANAGER"
+			type="component"
+			element="com_users"
+			link="index.php?option=com_users&amp;view=users"
+			class="class:user fa fa-user">
+		</menuitem>
+		<menuitem
+			title="MOD_MENU_COM_USERS_GROUPS"
+			type="component"
+			element="com_users"
+			link="index.php?option=com_users&amp;view=groups"
+			class="class:groups fa fa-group">
+		</menuitem>
+		<menuitem
+			title="MOD_MENU_COM_USERS_LEVELS"
+			type="component"
+			element="com_users"
+			link="index.php?option=com_users&amp;view=levels"
+			class="class:levels fa fa-user-secret">
+		</menuitem>
+		<menuitem
+			type="separator"
+		/>
+		<menuitem
+			type="url"
+			title="TPL_XIROADMIN_MOD_MENU_USER_MORE_MENU"
+			link="#"
+			class="class:link-more-menu"
+			scope="menu" >
+			<menuitem
+			title="MOD_MENU_FIELDS"
+			type="component"
+			element="com_fields"
+			link="index.php?option=com_fields&amp;context=com_users.user"
+			class="class:fields"
+			/>
+			<menuitem
+				title="MOD_MENU_FIELDS_GROUP"
+				type="component"
+				element="com_fields"
+				link="index.php?option=com_fields&amp;view=groups&amp;context=com_users.user"
+				class="class:category"
+			/>
+			<menuitem
+				title="MOD_MENU_COM_USERS_NOTES"
+				type="component"
+				element="com_users"
+				link="index.php?option=com_users&amp;view=notes"
+				class="class:user-note">
+			</menuitem>
+			<menuitem
+				title="MOD_MENU_COM_USERS_NOTE_CATEGORIES"
+				type="component"
+				element="com_categories"
+				link="index.php?option=com_categories&amp;view=categories&amp;extension=com_users"
+				class="class:category">
+			</menuitem>	
+			<menuitem
+				title="MOD_MENU_COM_PRIVACY"
+				type="component"
+				element="com_privacy"
+				link="index.php?option=com_privacy"
+				class="class:privacy"
+			/>
+			<menuitem
+				title="MOD_MENU_COM_ACTIONLOGS"
+				type="component"
+				element="com_actionlogs"
+				link="index.php?option=com_actionlogs"
+				class="class:userlogs"
+			/>					
+			<menuitem
+				title="MOD_MENU_MASS_MAIL_USERS"
+				type="component"
+				element="com_users"
+				link="index.php?option=com_users&amp;view=mail"
+				class="class:massmail"
+				scope="massmail"
+			/>
+		</menuitem>	
+	</menuitem>
+	<menuitem
+		title="MOD_MENU_COMPONENTS"
+		type="container"
+		class="class:info fa fa-rocket"
+	>
+		<params><![CDATA[{"hideitems":["com_joomlaupdate","com_postinstall"]}]]></params>
+	</menuitem>
+	<menuitem
+		title="TPL_XIROADMIN_MOD_MENU_EXTENSIONS_MANAGER"
+		type="heading"
+		class="class:extmanager fa fa-cloud-download"
+	>
+		<menuitem
+				title="MOD_MENU_INSTALLER_SUBMENU_INSTALL"
+				type="component"
+				element="com_installer"
+				link="index.php?option=com_installer"
+				class="class:install fa fa-cloud-download"
+			/>
+		<menuitem
+			title="MOD_MENU_INSTALLER_SUBMENU_UPDATE"
+			type="component"
+			element="com_installer"
+			link="index.php?option=com_installer&amp;view=update"
+			class="class:install fa fa-level-up "
+		/>
+		<menuitem
+			title="COM_JOOMLAUPDATE"
+			type="component"
+			element="com_joomlaupdate"
+			link="index.php?option=com_joomlaupdate"
+			class="class:component fa fa-level-up"
+		/>
+		<menuitem
+			title="MOD_MENU_INSTALLER_SUBMENU_MANAGE"
+			type="component"
+			element="com_installer"
+			link="index.php?option=com_installer&amp;view=manage"
+			class="class:install fa fa-remove"
+		/>
+	</menuitem>
+	<menuitem
+		title="MOD_MENU_SYSTEM"
+		type="heading"
+		iconclass="nav-icon fas fa-th"
+		class="class:cpanel fa fa-cog"
+		>
+		<menuitem
+			title="MOD_MENU_CLEAR_CACHE"
+			type="component"
+			element="com_cache"
+			link="index.php?option=com_cache"
+			class="class:clear fa fa-database"
+		/>
+		<menuitem
+			title="MOD_MENU_PURGE_EXPIRED_CACHE"
+			type="component"
+			element="com_cache"
+			link="index.php?option=com_cache&amp;view=purge"
+			class="class:purge fa fa-calendar-times-o"
+		/>
+		<menuitem
+			title="MOD_MENU_GLOBAL_CHECKIN"
+			type="component"
+			element="com_checkin"
+			link="index.php?option=com_checkin"
+			class="class:checkin fa fa-lock"
+		/>
+		<menuitem
+			title="MOD_MENU_EXTENSIONS_PLUGIN_MANAGER"
+			type="component"
+			element="com_plugins"
+			link="index.php?option=com_plugins"
+			class="class:plugin fa fa-plug"
+		/>
+
+		<menuitem
+			title="MOD_MENU_EXTENSIONS_LANGUAGE_MANAGER"
+			type="component"
+			element="com_languages"
+			link="index.php?option=com_languages"
+			class="class:language fa fa-language">
+
+			<menuitem
+				title="MOD_MENU_COM_LANGUAGES_SUBMENU_INSTALLED"
+				type="component"
+				element="com_languages"
+				link="index.php?option=com_languages&amp;view=installed"
+				class="class:language fa fa-language"
+			/>
+			<menuitem
+				title="MOD_MENU_COM_LANGUAGES_SUBMENU_CONTENT"
+				type="component"
+				element="com_languages"
+				link="index.php?option=com_languages&amp;view=languages"
+				class="class:language"
+			/>
+			<menuitem
+				title="MOD_MENU_COM_LANGUAGES_SUBMENU_OVERRIDES"
+				type="component"
+				element="com_languages"
+				link="index.php?option=com_languages&amp;view=overrides"
+				class="class:language"
+			/>
+		</menuitem>
+
+		<menuitem
+			type="url"
+			title="TPL_XIROADMIN_MOD_MENU_SYSTEM_MORE"
+			link="#" 
+			class="class:none"
+			>
+			<menuitem
+				title="MOD_MENU_COM_TEMPLATES_SUBMENU_TEMPLATES"
+				type="component"
+				element="com_templates"
+				link="index.php?option=com_templates&amp;view=templates"
+				class="class:themes fa  fa-file-code-o"
+			/>
+			<menuitem
+				title="MOD_MENU_INSTALLER_SUBMENU_DATABASE"
+				type="component"
+				element="com_installer"
+				link="index.php?option=com_installer&amp;view=database"
+				class="class:install"
+			/>
+			<menuitem
+				title="MOD_MENU_INSTALLER_SUBMENU_WARNINGS"
+				type="component"
+				element="com_installer"
+				link="index.php?option=com_installer&amp;view=warnings"
+				class="class:install"
+			/>
+			<menuitem
+				title="MOD_MENU_INSTALLER_SUBMENU_UPDATESITES"
+				type="component"
+				element="com_installer"
+				link="index.php?option=com_installer&amp;view=updatesites"
+				class="class:install"
+			/>
+
+			<menuitem
+				title="MOD_MENU_INSTALLER_SUBMENU_DISCOVER"
+				type="component"
+				element="com_installer"
+				link="index.php?option=com_installer&amp;view=discover"
+				class="class:install"
+			/>
+
+		</menuitem>
+
+
+
+
+
+		<menuitem
+			title="MOD_MENU_SYSTEM_INFORMATION"
+			type="component"
+			element="com_admin"
+			link="index.php?option=com_admin&amp;view=sysinfo"
+			class="class:info fa fa-info-circle"
+		/>
+		<menuitem
+			title="MOD_MENU_CONFIGURATION"
+			type="component"
+			element="com_config"
+			link="index.php?option=com_config"
+			class="class:config fa fa-cogs"
+		/>
+	</menuitem>
+	
+	<menuitem
+		title="MOD_MENU_HELP"
+		type="heading"
+		>
+	
+		<menuitem
+			type="url"
+			target="_blank"
+			title="TPL_XIROADMIN_MOD_MENU_HELP_XIROWEB_DOCS"
+			link="https://www.xiroweb.com"
+			class="class:help fa fa-link"
+			scope="help"
+		/>
+	</menuitem>
+
+</menu>

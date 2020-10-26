@@ -1,0 +1,7 @@
+/* FIX com_acym menu */
+#acym_wrapper {
+    position: relative;
+}
+#acym_wrapper #acym__joomla__left-menu {
+    position: absolute !important;
+}

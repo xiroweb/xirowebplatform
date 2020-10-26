@@ -88,8 +88,12 @@ INSERT INTO `#__assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `titl
 (57, 1, 111, 112, 1, 'com_actionlogs', 'com_actionlogs', '{}'),
 (58, 18, 74, 75, 2, 'com_modules.module.88', 'Latest Actions', '{}'),
 (59, 18, 76, 77, 2, 'com_modules.module.89', 'Privacy Dashboard', '{}'),
-(60, 11, 26, 27, 2, 'com_languages.language.2','Vietnamese (vi-VN)','{}');
-
+(60, 11, 26, 27, 2, 'com_languages.language.2','Vietnamese (vi-VN)','{}'),
+(61, 18, 78, 79, 2, 'com_modules.module.90', 'Menu Admin', '{}'),
+(62, 18, 80, 81, 2, 'com_modules.module.91', 'Thống kê', '{}'),
+(63, 18, 78, 79, 2, 'com_modules.module.92', 'Bài viết xem nhiều', '{}'),
+(64, 18, 80, 81, 2, 'com_modules.module.93', 'Bài viết mới', '{}'),
+(65, 18, 82, 83, 2, 'com_modules.module.94', 'App XiroWeb (Components)', '{}');
 -- --------------------------------------------------------
 
 --
@@ -680,8 +684,10 @@ INSERT INTO `#__extensions` (`extension_id`, `package_id`, `name`, `type`, `elem
 INSERT INTO `#__extensions` VALUES
 (10000,10002, 'Vietnamese-VN', 'language', 'vi-VN', '', 0, 1, 0, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10001,10002, 'Vietnamese-VN', 'language', 'vi-VN', '', 1, 1, 0, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10002,0, 'Vietnamese Language Pack', 'package', 'pkg_vi-VN', '', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0);
-
+(10002,0, 'Vietnamese Language Pack', 'package', 'pkg_vi-VN', '', 0, 1, 1, 0, '', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10003, 0, 'xiroadmin', 'template', 'xiroadmin', '', 1, 1, 1, 0, '{\"name\":\"xiroadmin\",\"type\":\"template\",\"creationDate\":\"08\\/2020\",\"author\":\"XiroWeb\",\"copyright\":\"Copyright (C) 2020 XiroWeb, Inc. All rights reserved.\",\"authorEmail\":\"support@xiroweb.com\",\"authorUrl\":\"\",\"version\":\"1.0.2\",\"description\":\"TPL_XIROADMIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"templateDetails\"}', '{\"headerColor\":\"#147cd0\",\"linkColor\":\"#3071a9\",\"loginBackgroundColor\":\"#2196f3\",\"logoFile\":\"\",\"loginLogoFile\":\"\",\"admin_menus\":\"1\",\"displayHeader\":\"1\",\"statusFixed\":\"1\",\"stickyToolbar\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10004, 0, 'plg_system_moduleadmin', 'plugin', 'moduleadmin', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_moduleadmin\",\"type\":\"plugin\",\"creationDate\":\"August 2020\",\"author\":\"Dustin Dzung\",\"copyright\":\"Copyright (C) 2020 XiroWeb. All rights reserved.\",\"authorEmail\":\"support@xiroweb.com\",\"authorUrl\":\"www.xiroweb.com\",\"version\":\"1.1.3\",\"description\":\"PLG_SYSTEM_MODULEADMIN_DESCRIPTION\",\"group\":\"\",\"filename\":\"moduleadmin\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10005, 0, 'plg_content_xirowebautomenu', 'plugin', 'xirowebautomenu', 'content', 0, 1, 1, 0, '{\"name\":\"plg_content_xirowebautomenu\",\"type\":\"plugin\",\"creationDate\":\"October 2020\",\"author\":\"Dustin Dzung\",\"copyright\":\"Copyright (C) 2020 XiroWeb. All rights reserved.\",\"authorEmail\":\"support@xiroweb.com\",\"authorUrl\":\"www.xiroweb.com\",\"version\":\"1.0.5\",\"description\":\"PLG_CONTENT_XIROWEBAUTOMENU_DESCRIPTION\",\"group\":\"\",\"filename\":\"xirowebautomenu\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 -- --------------------------------------------------------
 
 --
@@ -1542,7 +1548,12 @@ INSERT INTO `#__modules` (`id`, `asset_id`, `title`, `note`, `content`, `orderin
 (86, 53, 'Joomla Version', '', '', 1, 'footer', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_version', 3, 1, '{"format":"short","product":"1","layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
 (87, 55, 'Sample Data', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_sampledata', 6, 1, '{}', 1, '*'),
 (88, 58, 'Latest Actions', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_latestactions', 6, 1, '{}', 1, '*'),
-(89, 59, 'Privacy Dashboard', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_privacy_dashboard', 6, 1, '{}', 1, '*');
+(89, 59, 'Privacy Dashboard', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_privacy_dashboard', 6, 1, '{}', 1, '*'),
+(90, 61, 'Menu Admin', '', NULL, 1, 'xiromenu', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 1, '{\"menutype\":\"*\",\"preset\":\"xiro\",\"check\":1,\"shownew\":1,\"showhelp\":1,\"forum_url\":false,\"layout\":\"xiroadmin:xiro\",\"moduleclass_sfx\":\"\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 1, '*'),
+(91, 62, 'Thống kê', '', NULL, 1, 'cpanel2', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_stats_admin', 3, 0, '{\"serverinfo\":1,\"siteinfo\":1,\"counter\":1,\"increase\":0,\"layout\":\"xiroadmin:xiroweb\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 1, '*'),
+(92, 63, 'Bài viết xem nhiều', '', NULL, 1, 'cpanel3', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_popular', 3, 1, '{\"count\":5,\"catid\":\"\",\"user_id\":\"0\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"automatic_title\":0,\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 1, '*'),
+(93, 64, 'Bài viết mới', '', NULL, 1, 'cpanel3', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_latest', 3, 1, '{\"count\":5,\"ordering\":\"c_dsc\",\"catid\":\"\",\"user_id\":\"0\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"automatic_title\":0,\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 1, '*'),
+(94, 65, 'App XiroWeb (Components)', '', NULL, 1, 'cpanel4', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 1, 1, '{\"menutype\":\"*\",\"preset\":\"xirocomponent\",\"check\":1,\"shownew\":1,\"showhelp\":1,\"forum_url\":false,\"layout\":\"xiroadmin:appcpanel\",\"moduleclass_sfx\":\"\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 1, '*');
 
 -- --------------------------------------------------------
 
@@ -1580,8 +1591,12 @@ INSERT INTO `#__modules_menu` (`moduleid`, `menuid`) VALUES
 (86, 0),
 (87, 0),
 (88, 0),
-(89, 0);
-
+(89, 0),
+(90, 0),
+(91, 0),
+(92, 0),
+(93, 0),
+(94, 0);
 -- --------------------------------------------------------
 
 --
@@ -1853,7 +1868,8 @@ INSERT INTO `#__template_styles` (`id`, `template`, `client_id`, `home`, `title`
 (4, 'beez3', 0, '0', 'Beez3 - Default', '{"wrapperSmall":"53","wrapperLarge":"72","logo":"images\\/joomla_black.png","sitetitle":"Joomla!","sitedescription":"Open Source Content Management","navposition":"left","templatecolor":"personal","html5":"0"}'),
 (5, 'hathor', 1, '0', 'Hathor - Default', '{"showSiteName":"0","colourChoice":"","boldText":"0"}'),
 (7, 'protostar', 0, '1', 'protostar - Default', '{"templateColor":"","logoFile":"","googleFont":"1","googleFontName":"Open+Sans","fluidContainer":"0"}'),
-(8, 'isis', 1, '1', 'isis - Default', '{"templateColor":"","logoFile":""}');
+(8, 'isis', 1, '0', 'isis - Default', '{"templateColor":"","logoFile":""}'),
+(9, 'xiroadmin', 1, '1', 'XiroAdmin Administrator template - Mặc định', '{\"headerColor\":\"#147cd0\",\"linkColor\":\"#3071a9\",\"loginBackgroundColor\":\"#2196f3\",\"logoFile\":\"\",\"loginLogoFile\":\"\",\"admin_menus\":\"1\",\"displayHeader\":\"1\",\"statusFixed\":\"1\",\"stickyToolbar\":\"1\"}');
 
 -- --------------------------------------------------------
 
