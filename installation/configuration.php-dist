@@ -49,7 +49,7 @@ class JConfig
 	public $secret = 'FBVtggIk5lAzEU9H';     // Change this to something more secure
 	public $gzip = '0';
 	public $error_reporting = 'default';
-	public $helpurl = 'https://help.joomla.org/proxy?keyref=Help{major}{minor}:{keyref}&lang={langcode}';
+	public $helpurl = 'https://www.xiroweb.com/{langcode}/help/{keyref}?major={major}&minor={minor}';
 	public $ftp_host = '';
 	public $ftp_port = '';
 	public $ftp_user = '';
@@ -65,7 +65,7 @@ class JConfig
 	public $offset = 'UTC';
 
 	/* Session settings */
-	public $lifetime = '15';                  // Session time
+	public $lifetime = '90';                  // Session time
 	public $session_handler = 'database';
 	public $shared_session = '0';
 	public $session_memcache_server_host = 'localhost';
@@ -95,7 +95,7 @@ class JConfig
 
 	/* Cache Settings */
 	public $caching = '0';
-	public $cachetime = '15';
+	public $cachetime = '45';
 	public $cache_handler = 'file';
 	public $cache_platformprefix = '0';
 	public $memcache_persist = '1';
@@ -125,8 +125,8 @@ class JConfig
 	public $debug_lang_const = '1';
 
 	/* Meta Settings */
-	public $MetaDesc = 'Joomla! - the dynamic portal engine and content management system';
-	public $MetaKeys = 'joomla, Joomla';
+	public $MetaDesc = '';
+	public $MetaKeys = '';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';

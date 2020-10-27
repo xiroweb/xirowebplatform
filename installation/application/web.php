@@ -402,7 +402,7 @@ final class InstallationApplicationWeb extends JApplicationCms
 		}
 
 		// Set the official helpurl.
-		$options['helpurl'] = 'https://help.joomla.org/proxy?keyref=Help{major}{minor}:{keyref}&lang={langcode}';
+		$options['helpurl'] = 'https://www.xiroweb.com/{langcode}/help/{keyref}?major={major}&minor={minor}';
 
 		// Store helpurl in the session.
 		$this->getSession()->set('setup.helpurl', $options['helpurl']);

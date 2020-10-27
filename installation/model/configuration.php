@@ -72,7 +72,7 @@ class InstallationModelConfiguration extends JModelBase
 		$registry->set('sitename', $options->site_name);
 		$registry->set('editor', 'tinymce');
 		$registry->set('captcha', '0');
-		$registry->set('list_limit', 20);
+		$registry->set('list_limit', 30);
 		$registry->set('access', 1);
 
 		// Debug settings.
@@ -120,20 +120,20 @@ class InstallationModelConfiguration extends JModelBase
 		// Cache settings.
 		$registry->set('caching', 0);
 		$registry->set('cache_handler', 'file');
-		$registry->set('cachetime', 15);
+		$registry->set('cachetime', 45);
 		$registry->set('cache_platformprefix', 0);
 
 		// Meta settings.
 		$registry->set('MetaDesc', $options->site_metadesc);
 		$registry->set('MetaKeys', '');
 		$registry->set('MetaTitle', 1);
-		$registry->set('MetaAuthor', 1);
+		$registry->set('MetaAuthor', 0);
 		$registry->set('MetaVersion', 0);
 		$registry->set('robots', '');
 
 		// SEO settings.
 		$registry->set('sef', 1);
-		$registry->set('sef_rewrite', 0);
+		$registry->set('sef_rewrite', 1);
 		$registry->set('sef_suffix', 0);
 		$registry->set('unicodeslugs', 0);
 
@@ -145,7 +145,7 @@ class InstallationModelConfiguration extends JModelBase
 		$registry->set('tmp_path', JPATH_ROOT . '/tmp');
 
 		// Session setting.
-		$registry->set('lifetime', 15);
+		$registry->set('lifetime', 90);
 		$registry->set('session_handler', 'database');
 		$registry->set('shared_session', 0);
 
