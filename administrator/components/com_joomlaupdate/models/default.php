@@ -37,12 +37,12 @@ class JoomlaupdateModelDefault extends JModelLegacy
 			// "Minor & Patch Release for Current version AND Next Major Release".
 			case 'sts':
 			case 'next':
-				$updateURL = 'https://update.joomla.org/core/sts/list_sts.xml';
+				$updateURL = 'https://update.xiroweb.com/core/sts/list_sts.xml';
 				break;
 
 			// "Testing"
 			case 'testing':
-				$updateURL = 'https://update.joomla.org/core/test/list_test.xml';
+				$updateURL = 'https://update.xiroweb.com/core/test/list_test.xml';
 				break;
 
 			// "Custom"
@@ -66,7 +66,7 @@ class JoomlaupdateModelDefault extends JModelLegacy
 			 * case 'nochange':
 			 */
 			default:
-				$updateURL = 'https://update.joomla.org/core/list.xml';
+				$updateURL = 'https://update.xiroweb.com/core/list.xml';
 		}
 
 		$db = $this->getDbo();

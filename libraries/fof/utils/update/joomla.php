@@ -21,21 +21,21 @@ class FOFUtilsUpdateJoomla extends FOFUtilsUpdateExtension
 	 *
 	 * @var  string
 	 */
-	protected static $lts_url = 'http://update.joomla.org/core/list.xml';
+	protected static $lts_url = 'https://update.xiroweb.com/core/list.xml';
 
 	/**
 	 * The source for STS updates
 	 *
 	 * @var  string
 	 */
-	protected static $sts_url = 'http://update.joomla.org/core/sts/list_sts.xml';
+	protected static $sts_url = 'https://update.xiroweb.com/core/sts/list_sts.xml';
 
 	/**
 	 * The source for test release updates
 	 *
 	 * @var  string
 	 */
-	protected static $test_url = 'http://update.joomla.org/core/test/list_test.xml';
+	protected static $test_url = 'https://update.xiroweb.com/core/test/list_test.xml';
 
 	/**
 	 * Reads an "extension" XML update source and returns all listed update entries.

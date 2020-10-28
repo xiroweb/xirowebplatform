@@ -1545,7 +1545,7 @@ INSERT INTO `#__modules` (`id`, `asset_id`, `title`, `note`, `content`, `orderin
 (16, 50, 'Login Form', '', '', 7, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '{"greeting":"1","name":"0"}', 0, '*'),
 (17, 51, 'Breadcrumbs', '', '', 1, 'position-2', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_breadcrumbs', 1, 1, '{"moduleclass_sfx":"","showHome":"1","homeText":"","showComponent":"1","separator":"","cache":"0","cache_time":"0","cachemode":"itemid"}', 0, '*'),
 (79, 52, 'Multilanguage status', '', '', 1, 'status', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 'mod_multilangstatus', 3, 1, '{"layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
-(86, 53, 'Joomla Version', '', '', 1, 'footer', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_version', 3, 1, '{"format":"short","product":"1","layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
+(86, 53, 'XiroWeb Version', '', '', 1, 'footer', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_version', 3, 1, '{"format":"short","product":"0","layout":"_:default","moduleclass_sfx":"","cache":"0"}', 1, '*'),
 (87, 55, 'Sample Data', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_sampledata', 6, 1, '{}', 1, '*'),
 (88, 58, 'Latest Actions', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_latestactions', 6, 1, '{}', 1, '*'),
 (89, 59, 'Privacy Dashboard', '', '', 0, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_privacy_dashboard', 6, 1, '{}', 1, '*'),
@@ -2010,10 +2010,10 @@ CREATE TABLE IF NOT EXISTS `#__update_sites` (
 --
 
 INSERT INTO `#__update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`) VALUES
-(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 0),
-(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 0),
-(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 0);
-INSERT INTO `#__update_sites` VALUES (4,'Accredited Joomla! Translations','collection','https://raw.githubusercontent.com/xiroweb/updateserver/master/languages/vi-VN/vi-VN.xml',1,0,'');
+(1, 'XiroWeb Core', 'collection', 'https://update.xiroweb.com/core/list.xml', 1, 0),
+(2, 'Accredited XiroWeb Translations', 'collection', 'https://update.xiroweb.com/language/translationlist_3.xml', 1, 0),
+(3, 'XiroWeb Update Component Update Site', 'extension', 'https://update.xiroweb.com/core/extensions/com_joomlaupdate.xml', 1, 0);
+INSERT INTO `#__update_sites` VALUES (4,'Gói ngôn ngữ Tiếng Việt XiroWeb','collection','https://update.xiroweb.com/languages/vi-VN/vi-VN.xml',1,0,'');
 -- --------------------------------------------------------
 
 --

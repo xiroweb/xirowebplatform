@@ -47,6 +47,6 @@
 	</fileset>
 
 	<updateservers>
-		<server name="Joomla! Core" type="collection">https://update.joomla.org/core/list.xml</server>
+		<server name="XiroWeb Core" type="collection">https://update.xiroweb.com/core/list.xml</server>
 	</updateservers>
 </extension>

@@ -25,7 +25,7 @@ final class Version
 	 * @var    string
 	 * @since  3.5
 	 */
-	const PRODUCT = 'XiroWeb';
+	const PRODUCT = 'Joomla';
 
 	/**
 	 * Major release version.
