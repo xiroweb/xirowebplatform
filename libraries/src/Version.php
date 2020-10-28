@@ -25,7 +25,7 @@ final class Version
 	 * @var    string
 	 * @since  3.5
 	 */
-	const PRODUCT = 'Joomla!';
+	const PRODUCT = 'XiroWeb';
 
 	/**
 	 * Major release version.
@@ -60,7 +60,7 @@ final class Version
 	 * @var    string
 	 * @since  3.8.0
 	 */
-	const EXTRA_VERSION = '';
+	const EXTRA_VERSION = '12';
 
 	/**
 	 * Release version.
@@ -143,7 +143,7 @@ final class Version
 	 * @var    string
 	 * @since  3.5
 	 */
-	const URL = '<a href="https://www.joomla.org">Joomla!</a> is Free Software released under the GNU General Public License.';
+	const URL = '<a href="https://www.xiroweb.org">XiroWeb</a>';
 
 	/**
 	 * Magic getter providing access to constants previously defined as class member vars.
