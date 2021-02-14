@@ -133,7 +133,7 @@ class InstallationModelConfiguration extends JModelBase
 
 		// SEO settings.
 		$registry->set('sef', 1);
-		$registry->set('sef_rewrite', 1);
+		$registry->set('sef_rewrite', 0);
 		$registry->set('sef_suffix', 0);
 		$registry->set('unicodeslugs', 0);
 
