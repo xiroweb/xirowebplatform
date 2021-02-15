@@ -14,6 +14,9 @@ defined('_JEXEC') or die;
 <form action="index.php" method="post" id="adminForm" class="form-validate form-horizontal">
 	<div class="row-fluid">
 		<div class="span12">
+			<?php echo JText::_('INSTL_DATABASE_MORE_OPTIONS_DESC_FTP'); ?>
+		</div>
+		<div class="span12">
 			<div class="btn-toolbar">
 				<div class="btn-group pull-right">
 					<a class="btn" href="#" onclick="return Install.goToPage('database');" rel="prev" title="<?php echo JText::_('JPREVIOUS'); ?>"><span class="icon-arrow-left"></span> <?php echo JText::_('JPREVIOUS'); ?></a>
